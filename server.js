@@ -7,9 +7,6 @@ require('dotenv').config();
 const weatherData = require('./data/weather.json');
 const PORT = process.env.PORT;
 
-app.get('/test', (req, res) => {
-    res.status(200).send("test");
-});
 app.get('/weather', (req, res) => {
     let lat = Number(req.query.lat);
     let lon = Number(req.query.lon);
