@@ -10,6 +10,12 @@ const PORT = process.env.PORT;
 
 const weatherData = require('./data/weather.json');
 
+app.get("/",(req,res) => {
+    res.status(200).json({
+        "message":"Welcome:to the server"
+    })
+})
+
 let handleWeather = async (req,res)=>{
     let key = process.env.WEATHERBIT_API_KEY;
     let city = req.query.searchCity;
