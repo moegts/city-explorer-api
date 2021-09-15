@@ -8,7 +8,6 @@ require('dotenv').config();
 app.use(cors());
 const PORT = process.env.PORT;
 
-const weatherData = require('./data/weather.json');
 
 app.get("/",(req,res) => {
     res.status(200).json({
@@ -29,7 +28,28 @@ let handleWeather = async (req,res)=>{
 }
 app.get('/weather', handleWeather)
 
-// Model
+let handleMovie = async (req,res)=>{
+    let key = process.env.MOVIE_API_KEY;
+    let country = req.query.searchCity;
+    let url = `https://api.themoviedb.org/3/search/movie?api_key=${key}&query=${country}`
+    let axiosData = await axios.get(url);
+    let moivieData = axiosData.data;
+    let cleanedData = moivieData.results.map(item=>{
+        return new movie(
+            item.title,
+            item.overview,
+            item.vote_average,
+            item.vote_count,
+            item.poster_path,
+            item.popularity,
+            item.release_date,
+            );
+    })
+    res.status(200).json(cleanedData);
+}
+app.get('/movie', handleMovie)
+
+// Model weather
 class weatherBit{
     constructor(date,description){
         this.date=date;
@@ -37,31 +57,25 @@ class weatherBit{
     }
 }
 
-app.get('/weather', (req, res) => {
-    let lat = Number(req.query.lat);
-    let lon = Number(req.query.lon);
-    let searchInQuery = "";
-    if (lat && lon) {
-        searchInQuery = weatherData.find(i => i.lat === lat && i.lon === lon)
-            ;
-        if (searchInQuery) {
-            let foreCast = searchInQuery.data.map(i => {
-                return {
-                    date: i.datetime,
-                    description: i.weather.description,
-                }
-
-            })
-            let result = { cityName: searchInQuery.city_name, foreCast: foreCast };
-            res.status(200).json(result);
-        } else {
-            res.status(400).send("not found")
-        }
+// Model movie
+class movie{
+    constructor(
+        title,
+        overview,
+        vote_average,
+        vote_count,
+        poster_path,
+        popularity,
+        release_date){
+        this.title = title;
+        this.overview = overview;
+        this.vote_average = vote_average;
+        this.vote_count = vote_count;
+        this.poster_path = "https://image.tmdb.org/t/p/w500" + poster_path;
+        this.popularity = popularity;
+        this.release_date = release_date;
     }
-    else {
-        res.status(400).send("provide correct query params please");
-    }
-}) 
+}
 
 app.listen(PORT, () => {
     console.log(`ON ${PORT}`);
