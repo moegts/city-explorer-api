@@ -1,11 +1,13 @@
 # Project Name
 
 **Author**: Mohamamd Khalil
-**Version**: 1.0.0
+**Version**: 2.0.0
 
 ## Overview
 
--this website will give the user data logistic data about the city or country he is looking for.
+- this website will give the user data logistic data about the city or country he is looking for.
+
+- this server is conected API to my frontend website
 
 ## Getting Started
 
@@ -45,7 +47,11 @@
 - React Bootstrap
 - Axios
 - LocationIQ API
+- weatherbit
+- themoviedb
 - CSS
+- javascript
+- Node js
 
 ## Change Log
 
@@ -54,6 +60,7 @@
 - 13-09-2021 03:15pm - Application now can alert for errors.
 
 ## Credit and Collaborations
+
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 
 [Eslam Akram](https://github.com/eslamakram)
@@ -67,6 +74,20 @@ Estimate of time needed to complete: 3 hours
 Start time: 9pm
 
 Finish time: 1pm
+
+Actual time needed to complete: 4 hours
+
+- - -
+
+- - -
+
+Name of feature: Link API TO frontend
+
+Estimate of time needed to complete: 4 hours
+
+Start time: 11pm
+
+Finish time: 3am
 
 Actual time needed to complete: 4 hours
 
