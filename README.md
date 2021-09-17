@@ -1,7 +1,7 @@
 # Project Name
 
 **Author**: Mohamamd Khalil
-**Version**: 2.0.0
+**Version**: 3.0.0
 
 ## Overview
 
@@ -58,6 +58,8 @@
 - 12-09-2021 10:50pm - Application now has a location explore functionality, with a GET route for the location resource.
 - 12-09-2021 11:55pm - Application now can show map of the requested location.
 - 13-09-2021 03:15pm - Application now can alert for errors.
+- 14-09-2021 12:00am - link weather api & link movie api.
+
 
 ## Credit and Collaborations
 
