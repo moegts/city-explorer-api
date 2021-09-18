@@ -1,7 +1,7 @@
 # Project Name
 
 **Author**: Mohamamd Khalil
-**Version**: 3.0.0
+**Version**: 5.0.0
 
 ## Overview
 
@@ -41,6 +41,10 @@
     Set the state to these new error value.
 4. Pass the new state values to ErrorMessage as props and use them there.
 
+### added movie featers
+
+- now user can check the counter name movies
+
 ## Architecture
 
 - React
@@ -58,8 +62,9 @@
 - 12-09-2021 10:50pm - Application now has a location explore functionality, with a GET route for the location resource.
 - 12-09-2021 11:55pm - Application now can show map of the requested location.
 - 13-09-2021 03:15pm - Application now can alert for errors.
-- 14-09-2021 12:00am - link weather api & link movie api.
-
+- 14-09-2021 11:00pm - link weather api
+- 14-09-2021 4:00am - link movie api.
+- 16-09-2021 9:00pm - apply MVC on the code.
 
 ## Credit and Collaborations
 
@@ -83,7 +88,7 @@ Actual time needed to complete: 4 hours
 
 - - -
 
-Name of feature: Link API TO frontend
+Name of feature: Movie API.
 
 Estimate of time needed to complete: 4 hours
 
@@ -92,5 +97,19 @@ Start time: 11pm
 Finish time: 3am
 
 Actual time needed to complete: 4 hours
+
+- - -
+
+- - -
+
+Name of feature: MVC
+
+Estimate of time needed to complete: 1 hours
+
+Start time: 7:30pm
+
+Finish time: 8:30pm
+
+Actual time needed to complete: 1 hours
 
 - - -
