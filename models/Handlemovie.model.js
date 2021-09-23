@@ -16,5 +16,5 @@ class Movie{
         this.popularity = popularity;
         this.release_date = release_date;
     }
-}
+};
 module.exports = Movie;
